@@ -1,7 +1,7 @@
 class XMLHttpRequest {
   _headers = [];
-  _eventLoad = (b: any) => {};
-  _eventError = (e: any) => {};
+  _eventLoad = () => {};
+  _eventError = () => {};
   _eventTimeout = () => {};
   _responseHeaders = "";
   _aborted = false;
@@ -14,7 +14,7 @@ class XMLHttpRequest {
   statusText = "OK";
   responseUrl = "";
   responseType = "";
-  response: any = null;
+  response = null;
 
   async _respond(response) {
     if (this._aborted) {
